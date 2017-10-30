@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "895711609582",
+    "firebase_url": "https://ravel-667c6.firebaseio.com",
+    "project_id": "ravel-667c6",
+    "storage_bucket": "ravel-667c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895711609582:android:22f60ce7a03d6155",
+        "android_client_info": {
+          "package_name": "com.raveltrips.android.ravel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895711609582-71k7tpkghoe9731hoe720donmdgjtf0c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raveltrips.android.ravel",
+            "certificate_hash": "db154ef51559b74fc3812c06ab420299e72a692b"
+          }
+        },
+        {
+          "client_id": "895711609582-arpt2sfbqpq4tasvqir1636btpk6gf3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP6POlvZLtlD0QfSS26xXgNaXkVFruNlA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895711609582-arpt2sfbqpq4tasvqir1636btpk6gf3h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

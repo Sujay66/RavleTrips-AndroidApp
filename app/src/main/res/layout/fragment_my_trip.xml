@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_my_trip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.raveltrips.android.ravel.fragments.MyTripFragment">
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_gravity="left"
+                    android:id="@+id/toolbar_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:titleTextColor="@color/textColorPrimary1"
+                    android:background="@color/lightColor2">
+
+                    <android.support.v7.widget.SearchView
+                        android:id="@+id/search_my_trips"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"/>
+                </android.support.v7.widget.Toolbar>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:checkedButton="@+id/completed_rb"
+                        android:background="@drawable/rounded_box"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/completed_rb"
+                            android:layout_width="185dp"
+                            android:layout_height="match_parent"
+                            android:text="Completed" />
+
+                        <RadioButton
+                            android:id="@+id/wishlist_rb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Wishlist" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mytrips_recyclerview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
+
+
+

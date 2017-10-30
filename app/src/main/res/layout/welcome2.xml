@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/orange_gradient_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Choose from 15+ Trips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textHeaderNormal"
+            android:textAlignment="center"
+            android:textColor="@color/DarkOrange"
+            android:textSize="25sp"
+            android:id="@+id/textView6"
+            android:layout_marginTop="20dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            app:srcCompat="@drawable/playa"
+            android:id="@+id/imageView6"
+            android:scaleType="fitXY"
+            android:layout_margin="20dp"
+            android:layout_height="150dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/fuji"
+                android:id="@+id/imageView3"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:padding="0dp"
+                android:paddingLeft="0dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/memorialpoint"
+                android:id="@+id/imageView5"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:layout_marginLeft="5dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/buddha"
+                android:id="@+id/imageView4"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+        <TextView
+            android:text="Madrid, Costa Rica, Montreal, Australia, Cancun, Iceland . . . "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView19"
+            android:lines="3"
+            android:textAlignment="center"
+            android:textColor="@color/DarkOrange"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:text="Our immersive films and integrated booking platform makes booking enjoyable, reassuring, and fast."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView18"
+            android:textAlignment="center"
+            android:textColor="@color/DarkOrange"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

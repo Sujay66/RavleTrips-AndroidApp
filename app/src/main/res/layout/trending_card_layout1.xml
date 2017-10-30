@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tripImage"
+                    android:padding="6dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:scaleType="fitXY"
+                    android:cropToPadding="false" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:id="@+id/tripName"
+                    android:layout_width="match_parent"
+                    android:textStyle="normal|bold"
+                    android:text="Lake Tahoe of California"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:layout_marginStart="11dp"
+                    android:textColor="@color/DimGray"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_height="24dp" />
+
+                <TextView
+                    android:text="California,United States Of America"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:id="@+id/tripAddress"
+                    android:layout_below="@+id/tripName"
+                    android:layout_alignStart="@+id/tripName"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tripRatingBar"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    android:stepSize=".1"
+                    android:isIndicator="true"
+                    android:clickable="false"
+                    android:maxHeight="57dp"
+                    android:minHeight="30dp"
+                    android:scaleX=".75"
+                    android:scaleY="0.75"
+                    android:transformPivotX="0dp"
+                    style="@style/RatingBar"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tripAddress"
+                    android:layout_alignParentEnd="true" />
+
+
+                <TextView
+                    android:text="$"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tripAmountSymbol"
+                    android:layout_below="@+id/tripReviewCount"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="normal|bold"
+                    android:textSize="20sp"
+                    android:layout_alignStart="@+id/tripReviewCount" />
+
+                <TextView
+                    android:text="12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tripAmount"
+                    android:textStyle="normal|bold"
+                    android:textSize="20sp"
+                    android:layout_alignBaseline="@+id/tripAmountSymbol"
+                    android:layout_alignBottom="@+id/tripAmountSymbol"
+                    android:layout_toEndOf="@+id/tripAmountSymbol" />
+
+                <TextView
+                    android:text="12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    android:id="@+id/tripReviewCount"
+                    android:layout_below="@+id/tripRatingBar"
+                    android:layout_alignStart="@+id/tripAddress" />
+
+                <TextView
+                    android:text="  Reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:layout_alignBaseline="@+id/tripReviewCount"
+                    android:layout_alignBottom="@+id/tripReviewCount"
+                    android:layout_toEndOf="@+id/tripReviewCount" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

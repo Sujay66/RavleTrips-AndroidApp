@@ -1,0 +1,311 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.raveltrips.android.ravel.fragments.SearchFragment">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Search Type:"
+            android:textStyle="normal|bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp" />
+
+        <RadioGroup
+            android:id="@+id/radioType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/normalSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Search"
+                android:checked="true"
+                android:layout_marginLeft="20dp" />
+
+            <RadioButton
+                android:id="@+id/currentSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Location" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_box"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/detail_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/editText"
+            android:text="Search for location:"
+            android:textStyle="normal|bold"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/detail_reviews"
+                android:hint="Enter the location!"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="11dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/voice_api_btn"
+                android:src="@drawable/voice"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editText"
+            android:layout_below="@+id/editText"
+            android:text="Search Options:"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal|bold"
+                    android:text="Price Range($): "
+                    android:layout_marginBottom="5dp" />
+
+                <TextView
+                    android:id="@+id/minValue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="min" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" - " />
+
+                <TextView
+                    android:id="@+id/maxValue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max" />
+            </LinearLayout>
+
+            <io.apptik.widget.MultiSlider
+                android:id="@+id/range_slider1"
+                android:layout_width="291dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="30dp"
+
+                app:range1="@drawable/multislider_primary_mtrl_alpha" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold"
+            android:text="Rating above:"
+            android:layout_marginTop="10dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/RatingBarNoParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress"
+        android:id="@+id/progressBar4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_box"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search from current location"
+            android:textStyle="normal|bold"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textView10"
+                android:layout_width="238dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:lines="3"
+                android:textColor="@color/DarkOrange"
+                android:hint="Current location will be displayed here."
+                android:textAlignment="gravity" />
+
+            <Button
+                android:background="@drawable/marker"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/button5"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal|bold"
+                    android:text="Distance Range(Miles): "
+                    android:layout_marginBottom="5dp" />
+
+                <TextView
+                    android:id="@+id/distminValue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="min" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" - " />
+
+                <TextView
+                    android:id="@+id/distmaxValue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max" />
+            </LinearLayout>
+
+            <io.apptik.widget.MultiSlider
+                android:id="@+id/range_slider2"
+                android:layout_width="291dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="30dp"
+
+                app:range1="@drawable/multislider_primary_mtrl_alpha"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            />
+
+        <Button
+            android:text="Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/button3"
+            android:layout_marginEnd="20dp" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
